@@ -1,6 +1,6 @@
 ﻿@model BasicSection
 
-<section class="section">
+<section class="section@(Model.Settings.ReverseSection ? " section--reverse" : "")">
     @if (Model.HasHeading)
     {
         <h2>@Model.Heading</h2>

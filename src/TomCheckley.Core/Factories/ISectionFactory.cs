@@ -5,7 +5,6 @@ namespace TomCheckley.Core.Factories
 {
     public interface ISectionFactory
     {
-        ISectionBase CreateModel(IPublishedElement content, params object[] args);
-        //ISectionBase CreateModel(IPublishedElement content, IPublishedValueFallback settings, params object[] args);
+        ISectionBase CreateModel(IPublishedElement content, IPublishedElement settings, params object[] args);
     }
 }

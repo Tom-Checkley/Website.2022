@@ -1,6 +1,6 @@
 ﻿@model TextModule
 
-<div>
+<div class="text-@(Model.Settings.TextAlign)">
     @if (Model.HasHeading)
     {
         <h3>@Model.Heading</h3>

@@ -5,7 +5,7 @@ namespace TomCheckley.Core.Models.ModuleTypes.Base
 {
     public class ModuleBase : UmbracoElementBase, IModuleBase
     {
-        private readonly IPublishedElement _settings;
+        protected IPublishedElement _settings;
 
         public Guid Id => _content.Key;
         public string RazorView => $"Modules/{_content.ContentType.Alias}";
