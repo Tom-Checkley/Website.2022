@@ -12,11 +12,6 @@ namespace TomCheckley.Core.Factories.Concrete
         public SectionFactory(string sectionTypenameSpace, string appendToDocTypeAlias = "", Type fallbackType = null)
             : base(sectionTypenameSpace, appendToDocTypeAlias, fallbackType) { }
 
-        public ISectionBase CreateModel(IPublishedElement content, params object[] args)
-        {
-            return base.Create(content, args);
-        }
-
         public ISectionBase CreateModel(IPublishedElement content, IPublishedElement settings, params object[] args)
         {
             var allArgs = new List<object>
