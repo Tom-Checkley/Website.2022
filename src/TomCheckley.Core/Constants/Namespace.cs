@@ -11,5 +11,7 @@ namespace TomCheckley.Core.Constants
         public const string Core = "TomCheckley.Core";
         public const string Models = $"{Core}.Models";
         public const string PageTypes = $"{Models}.PageTypes";
+        public const string SectionTypes = $"{Models}.SectionTypes";
+        public const string ModuleTypes = $"{Models}.ModuleTypes";
     }
 }

@@ -4,3 +4,5 @@
 }
 
 <h1>@Model.PageHeading</h1>
+
+@await Html.PartialAsync("Sections/SectionListing", Model.Sections)

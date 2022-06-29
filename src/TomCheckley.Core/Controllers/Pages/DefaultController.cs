@@ -48,7 +48,7 @@ namespace TomCheckley.Core.Controllers.Pages
         {
             get
             {
-                if (_umbracoHelperAccessor == null && _umbracoHelperAccessor.TryGetUmbracoHelper(out var umbracoHelper))
+                if (_umbracoHelperAccessor != null && _umbracoHelperAccessor.TryGetUmbracoHelper(out var umbracoHelper))
                 {
                     // If TryGetUmbracoHelper returns false, we couldn't get the helper because there was no HTTP Context
                     // This should not happen in an Umbraco Controller

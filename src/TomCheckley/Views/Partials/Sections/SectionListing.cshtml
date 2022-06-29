@@ -1,0 +1,6 @@
+﻿@model List<ISectionBase>
+
+@foreach (var section in Model)
+{
+    @await Html.PartialAsync(section.RazorView, section)
+}

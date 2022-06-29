@@ -1,0 +1,10 @@
+﻿@model BasicSection
+
+<section class="section">
+    @if (Model.HasHeading)
+    {
+        <h2>@Model.Heading</h2>
+    }
+    @await Html.PartialAsync("Modules/ModuleListing", Model.Modules)
+</section>
+

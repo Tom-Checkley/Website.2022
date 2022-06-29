@@ -1,0 +1,12 @@
+﻿@model TextModule
+
+<div>
+    @if (Model.HasHeading)
+    {
+        <h3>@Model.Heading</h3>
+    }
+    @if (!Model.BodyText.ToString().IsNullOrWhiteSpace())
+    {
+        <div>@Html.Raw(Model.BodyText)</div>
+    }
+</div>

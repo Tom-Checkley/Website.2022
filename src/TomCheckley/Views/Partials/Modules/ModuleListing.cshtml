@@ -1,0 +1,6 @@
+﻿@model List<IModuleBase>
+
+@foreach (var module in Model)
+{
+    @await Html.PartialAsync(module.RazorView, module)
+}
