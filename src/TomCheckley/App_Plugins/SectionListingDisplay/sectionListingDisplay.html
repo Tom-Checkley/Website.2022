@@ -1,0 +1,24 @@
+﻿<section class="sectionDisplay" ng-controller="sectionListingDisplayCtrl">
+    <link href="/umbraco/assets/css/umbraco.min.css" rel="stylesheet" />
+    <button type="button" ng-click="block.edit()" class="blockelement__draggable-element ng-scope ui-sortable-handle">
+        <!--<span class="caret"></span>-->
+        <div class="section__heading">
+            <span aria-hidden="true"><i class="icon {{block.content.icon}}"></i></span>
+            <!--<umb-icon icon="{{block.content.icon}}"></umb-icon>-->
+            <h3>{{block.content.contentTypeName}}<span ng-show="block.data.heading"> - {{ block.data.heading }}</span></h3>
+        </div>
+        <div class="section__list" ng-show="block.data.modules.contentData.length > 0">
+            <h4>Modules:</h4>
+            <ul>
+                <li ng-repeat="module in modules">
+                    <!--<code>
+                        <pre>{{module | json}}</pre>
+                    </code>-->
+                    <i class="icon {{ module.blockElementType.icon}}"></i>
+                    <span><span>{{ module.blockElementType.name }}</span><span ng-if="module.heading && module.heading.length > 0"> - {{ module.heading }}</span></span>
+                </li>
+            </ul>
+        </div>
+    </button>
+
+</section>

@@ -1,0 +1,72 @@
+﻿.umb-block-list__wrapper > * {
+    padding-bottom: 0.75rem;
+}
+.umb-block-list__wrapper > * > * + * {
+    margin-top: 0.75rem;
+}
+
+.sectionDisplay button {
+    appearance: none;
+    border: 1px solid #cecece;
+    border-radius: .25rem;
+    background-color: #f3f3f3;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.section__heading {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.section__heading h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    line-height: 1;
+}
+
+.sectionDisplay i {
+    display: inline-block;
+}
+
+.sectionDisplay i::before {
+    font-size: 2rem;
+}
+
+.section__list {
+    margin-top: 1rem;
+    background-color: #fff;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+}
+
+.section__list h4 {
+    font-size: 1rem;
+    margin: 0 0 0.75rem;
+}
+
+.section__list ul {
+    font-size: 1rem;
+    margin: 0;
+    list-style: none;
+}
+
+.section__list li {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.section__list i::before {
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+.section__list li + li {
+    margin-top: 0.5rem;
+}

@@ -5,7 +5,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Content Include="App_Plugins\SectionListingDisplay\SectionListingDisplay.css" />
+      <Content Include="App_Plugins\SectionListingDisplay\sectionListingDisplay.html" />
+    </ItemGroup>
+
+    <ItemGroup>
       <None Include="..\.editorconfig" Link=".editorconfig" />
+      <None Include="App_Plugins\SectionListingDisplay\SectionListingDisplay.Controller.js" />
+      <None Include="App_Plugins\SectionListingDisplay\package.manifest" />
     </ItemGroup>
 
     <ItemGroup>
@@ -18,6 +25,9 @@
         <PackageReference Include="uSync" Version="10.0.0" />
         <ProjectReference Include="..\TomCheckley.Core\TomCheckley.Core.csproj" />
         <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="wwwroot\media\" />
     </ItemGroup>
 
 
