@@ -2,7 +2,7 @@
 {
     public interface IPageBase
     {
-        string PageHeading { get; }
+        //string PageHeading { get; }
         Guid Id { get; }
         string Url { get; }
     }
