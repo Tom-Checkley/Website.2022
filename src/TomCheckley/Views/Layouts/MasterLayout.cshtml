@@ -6,8 +6,9 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
+    @await Component.InvokeAsync("Banner")
+    <main>
         @RenderBody()
-    </div>
+    </main>
 </body>
 </html>

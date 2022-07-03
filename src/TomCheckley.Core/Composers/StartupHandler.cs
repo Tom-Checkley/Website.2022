@@ -22,6 +22,7 @@ namespace TomCheckley.Core.Composers
             services.AddTransient<IPageFactory, PageFactory>();
             services.AddTransient<ISectionFactory, SectionFactory>();
             //services.AddTransient<IModuleFactory, ModuleFactory>();
+            services.AddTransient<IBannerFactory, BannerFactory>();
 
             // Services
             //services.AddTransient<ISettingsService, SettingsService>();

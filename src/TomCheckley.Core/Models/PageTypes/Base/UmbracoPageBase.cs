@@ -6,7 +6,7 @@ namespace TomCheckley.Core.Models.PageTypes.Base
 {
     public abstract class UmbracoPageBase : UmbracoContentBase, IPageBase
     {
-        public string PageHeading => _content.Value("pageHeading", fallback: Fallback.ToDefaultValue, defaultValue: _content.Name);
+        //public string PageHeading => _content.Value("pageHeading", fallback: Fallback.ToDefaultValue, defaultValue: _content.Name);
 
         protected UmbracoPageBase(IPublishedContent content) : base(content)
         {
