@@ -7,7 +7,7 @@ namespace TomCheckley.Core.Factories.Concrete
 {
     public class SectionFactory : UmbracoContentToModelFactory<ISectionBase>, ISectionFactory
     {
-        public SectionFactory() : base(Namespace.SectionTypes, $", {Namespace.Core}", typeof(BasicSection)) { }
+        public SectionFactory() : base(Namespaces.SectionTypes, $", {Namespaces.Core}", typeof(BasicSection)) { }
 
         public SectionFactory(string sectionTypenameSpace, string appendToDocTypeAlias = "", Type fallbackType = null)
             : base(sectionTypenameSpace, appendToDocTypeAlias, fallbackType) { }

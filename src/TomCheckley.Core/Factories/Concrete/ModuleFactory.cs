@@ -7,7 +7,7 @@ namespace TomCheckley.Core.Factories.Concrete
 {
     public class ModuleFactory : UmbracoContentToModelFactory<IModuleBase>, IModuleFactory
     {
-        public ModuleFactory() : base(Namespace.ModuleTypes, $", {Namespace.Core}", typeof(ModuleBase)) { }
+        public ModuleFactory() : base(Namespaces.ModuleTypes, $", {Namespaces.Core}", typeof(ModuleBase)) { }
 
         public ModuleFactory(string modelNamespace, string appendToDocTypeAlias = "", Type fallbackType = null) : base(modelNamespace, appendToDocTypeAlias, fallbackType)
         {

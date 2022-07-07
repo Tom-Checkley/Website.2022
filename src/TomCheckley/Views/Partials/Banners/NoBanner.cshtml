@@ -1,5 +1,5 @@
 ﻿@model NoBanner
 
-<header>
-    @await Html.PartialAsync("BannerHeading", Model)
+<header class="banner banner--no-banner">
+    @await Html.PartialAsync("Banners/BannerHeading", Model.Heading)
 </header>
