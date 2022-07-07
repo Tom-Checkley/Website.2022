@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TomCheckley.Core.Constants
 {
-    public static class Namespace
+    public static class Namespaces
     {
         public const string Core = "TomCheckley.Core";
         public const string Models = $"{Core}.Models";

@@ -12,7 +12,7 @@ namespace TomCheckley.Core.Factories.Concrete
 {
     public class PageFactory : UmbracoContentToModelFactory<IPageBase>, IPageFactory
     {
-        public PageFactory() : base(Namespace.PageTypes, $", {Namespace.Core}", typeof(UnknownPageType)) { }
+        public PageFactory() : base(Namespaces.PageTypes, $", {Namespaces.Core}", typeof(UnknownPageType)) { }
 
         public PageFactory(string pageTypeNamespace, string appendToDocTypeAlias = "", Type fallbackType = null)
             : base(pageTypeNamespace, appendToDocTypeAlias, fallbackType) { }

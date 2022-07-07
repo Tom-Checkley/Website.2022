@@ -1,0 +1,6 @@
+﻿@model ModularPage
+@{
+	Layout = "Layouts/MasterLayout.cshtml";
+}
+
+@await Html.PartialAsync("Sections/SectionListing", Model.Sections)
