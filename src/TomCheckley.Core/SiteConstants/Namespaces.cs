@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TomCheckley.Core.Constants
+namespace TomCheckley.Core.SiteConstants
 {
     public static class Namespaces
     {

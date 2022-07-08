@@ -1,4 +1,4 @@
-﻿using TomCheckley.Core.Constants;
+﻿using TomCheckley.Core.SiteConstants;
 using TomCheckley.Core.Models.Banners;
 using TomCheckley.Core.Models.Banners.Base;
 using Umbraco.Cms.Core.Web;
