@@ -2,6 +2,8 @@
 using System.Net;
 using TomCheckley.Core.Factories;
 using TomCheckley.Core.Factories.Concrete;
+using TomCheckley.Core.Services;
+using TomCheckley.Core.Services.Concrete;
 //using TomCheckley.Core.Services;
 //using TomCheckley.Core.Services.Concrete;
 using Umbraco.Cms.Core.Composing;
@@ -25,7 +27,8 @@ namespace TomCheckley.Core.Composers
             services.AddTransient<IBannerFactory, BannerFactory>();
 
             // Services
-            //services.AddTransient<ISettingsService, SettingsService>();
+            services.AddTransient<ICommonUmbracoContentService, CommonUmbracoContentService>();
+            services.AddTransient<ISiteService, SiteService>();
         }
     }
 }

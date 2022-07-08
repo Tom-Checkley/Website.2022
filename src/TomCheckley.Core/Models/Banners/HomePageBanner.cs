@@ -13,7 +13,7 @@ namespace TomCheckley.Core.Models.Banners
 {
     public class HomePageBanner : UmbracoPageBannerBase
     {
-        public override BannerHeading Heading => new(_content);
+        public override BannerHeadingViewModel Heading => new(_content);
 
         public override string RazorView => "Banners/HomePageBanner";
 
