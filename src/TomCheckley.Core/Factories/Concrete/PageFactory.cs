@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TomCheckley.Core.Constants;
-using TomCheckley.Core.Models.PageTypes;
+﻿using TomCheckley.Core.Models.PageTypes;
 using TomCheckley.Core.Models.PageTypes.Base;
+using TomCheckley.Core.SiteConstants;
 using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace TomCheckley.Core.Factories.Concrete

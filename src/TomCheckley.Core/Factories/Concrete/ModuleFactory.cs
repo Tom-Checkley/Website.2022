@@ -1,4 +1,4 @@
-﻿using TomCheckley.Core.Constants;
+﻿using TomCheckley.Core.SiteConstants;
 using TomCheckley.Core.Models.Base;
 using TomCheckley.Core.Models.ModuleTypes.Base;
 using Umbraco.Cms.Core.Models.PublishedContent;
