@@ -1,0 +1,12 @@
+﻿@model MainNavigation
+
+<nav>
+    <ul>
+        @foreach (var navItem in Model.NavItems)
+        {
+            <li>
+                <a href="@navItem.Url">@navItem.LinkText</a>
+            </li>
+        }
+    </ul>
+</nav>
