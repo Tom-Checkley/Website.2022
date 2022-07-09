@@ -8,7 +8,7 @@ namespace TomCheckley.Core.Models.Banners.Base
     {
         public abstract string RazorView { get; }
 
-        public virtual BannerHeading Heading => new(_content);
+        public virtual BannerHeadingViewModel Heading => new(_content);
 
         protected UmbracoPageBannerBase(IPublishedContent content) : base(content)
         {

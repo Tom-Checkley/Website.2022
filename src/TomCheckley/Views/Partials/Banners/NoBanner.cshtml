@@ -1,5 +1,6 @@
 ﻿@model NoBanner
 
 <header class="banner banner--no-banner">
+    @await Component.InvokeAsync("MainNavigation")
     @await Html.PartialAsync("Banners/BannerHeading", Model.Heading)
 </header>

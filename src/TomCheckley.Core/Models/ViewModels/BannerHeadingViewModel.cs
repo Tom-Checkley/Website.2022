@@ -4,7 +4,7 @@ using Umbraco.Extensions;
 
 namespace TomCheckley.Core.Models.ViewModels
 {
-    public class BannerHeading : UmbracoContentBase
+    public class BannerHeadingViewModel : UmbracoContentBase
     {
         public string HeadingLine1 => _content.Value("bannerHeadingLine1", fallback: Fallback.ToDefaultValue, defaultValue: _content.Name);
         public bool HasHeading => !HeadingLine1.IsNullOrWhiteSpace();
@@ -13,7 +13,7 @@ namespace TomCheckley.Core.Models.ViewModels
         public string HeadingSeparator => _content.Value<string>("bannerHeadingSeparator");
         public bool HasSeparator => !HeadingSeparator.IsNullOrWhiteSpace();
 
-        public BannerHeading(IPublishedContent content) : base(content)
+        public BannerHeadingViewModel(IPublishedContent content) : base(content)
         {
         }
     }
