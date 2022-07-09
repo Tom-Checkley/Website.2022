@@ -1,4 +1,5 @@
-﻿using TomCheckley.Core.Models.ViewModels;
+﻿using TomCheckley.Core.Models.Media;
+using TomCheckley.Core.Models.ViewModels;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Extensions;
 
@@ -25,6 +26,7 @@ namespace TomCheckley.Core.Services.Concrete
                 Title = currentPage.Value<string>("seoTitle", fallback: Fallback.ToDefaultValue, defaultValue: currentPage.Name),
                 Description = currentPage.Value<string>("seoDescription", fallback: Fallback.ToDefaultValue, defaultValue: websiteDescription),
                 AbsoluteUrl = currentPage.Url(mode: UrlMode.Absolute),
+                SocialShareImage = new UmbracoImage(currentPage.Value("socialShareImage", fallback: Fallback.ToDefaultValue, defaultValue: siteSettings.Value<IPublishedContent>("socialShareImage"))),
             };
         }
     }

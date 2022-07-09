@@ -1,4 +1,6 @@
-﻿namespace TomCheckley.Core.Models.ViewModels
+﻿using TomCheckley.Core.Models.Media;
+
+namespace TomCheckley.Core.Models.ViewModels
 {
     public class MetaDataViewModel
     {
@@ -6,6 +8,7 @@
         public string WebsiteName { get; set; }
         public string Description { get; set; }
         public string AbsoluteUrl { get; set; }
+        public UmbracoImage SocialShareImage { get; set; }
 
     }
 }

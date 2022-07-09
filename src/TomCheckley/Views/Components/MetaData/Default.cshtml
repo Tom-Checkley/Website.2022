@@ -1,5 +1,15 @@
-﻿@model MetaDataViewModel
+﻿@using TomCheckley.Core.Models.Media
+@model MetaDataViewModel
 
 <title>@Model.Title | @Model.WebsiteName</title>
 <meta name="description" content="@Model.Description" />
 <link rel="canonical" href="@Model.AbsoluteUrl"/>
+
+<meta property="og:title" content=@Model.Title | @Model.WebsiteName" />
+<meta property="og:description" content="@Model.Description" />
+<meta property="og:image" content="@Model.SocialShareImage.GetAbsoluteCropUrl(cropType: CropTypes.SocialShare)" />
+<meta property="og:image:width" content="@CropTypes.SocialShare.Width" />
+<meta property="og:image:height" content="@CropTypes.SocialShare.Height" />
+<meta property="og:url" content="@Model.AbsoluteUrl">
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_GB" />
