@@ -30,6 +30,7 @@ namespace TomCheckley.Core.Composers
             services.AddTransient<ICommonUmbracoContentService, CommonUmbracoContentService>();
             services.AddTransient<ISiteService, SiteService>();
             services.AddTransient<INavigationService, NavigationService>();
+            services.AddTransient<ICompanyDetailsService, CompanyDetailsService>();
         }
     }
 }
