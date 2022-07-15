@@ -1,0 +1,10 @@
+﻿@model MediaModule
+
+<section>
+    @if (Model.HasHeading)
+    {
+        <h2>@Model.Heading.Heading</h2>
+        <h3>@Model.Heading.Subheading</h3>
+    }
+    <div class="rte">@Html.Raw(Model.BodyText)</div>
+</section>

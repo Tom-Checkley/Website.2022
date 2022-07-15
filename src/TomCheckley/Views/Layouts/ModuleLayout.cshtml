@@ -1,0 +1,12 @@
+﻿@using TomCheckley.Core.Models.ModuleTypes.Base
+@model IModuleBase
+
+@if (Model is ModuleWithHeadingBase)
+{
+    <section>
+        @RenderBody()
+    </section>
+}
+else{
+    @RenderBody()
+}

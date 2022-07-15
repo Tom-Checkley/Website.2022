@@ -9,8 +9,6 @@ namespace TomCheckley.Core.Models.ModuleTypes
 {
     public class TextModule : ModuleWithSettingsBase
     {
-        public string Heading => _content.Value<string>("heading");
-        public bool HasHeading => !Heading.IsNullOrWhiteSpace();
         public HtmlEncodedString BodyText => _content.Value<HtmlEncodedString>("bodyText");
         public override TextModuleSettings Settings => new(_settings);
 
