@@ -13,10 +13,8 @@ using Umbraco.Extensions;
 
 namespace TomCheckley.Core.Models.ModuleTypes
 {
-    public class MediaModule : ModuleWithSettingsBase
+    public class MediaModule : ModuleWithHeadingBase
     {
-        public ModuleHeading Heading => new(_content, _parentSection);
-        public bool HasHeading => Heading.HasHeading;
         public HtmlEncodedString BodyText => _content.Value<HtmlEncodedString>("bodyText");
         public Link Button => _content.Value<Link>("button");
 

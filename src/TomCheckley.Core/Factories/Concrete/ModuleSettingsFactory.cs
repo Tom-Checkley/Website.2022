@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using TomCheckley.Core.Models.Base;
 using TomCheckley.Core.Models.ModuleTypes.Base;
 using TomCheckley.Core.Models.ModuleTypes.Settings;
-using TomCheckley.Core.SiteConstants;
+using TomCheckley.Core.SiteConstants.Strings;
 using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace TomCheckley.Core.Factories.Concrete

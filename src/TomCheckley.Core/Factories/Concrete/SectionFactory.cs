@@ -1,7 +1,7 @@
-﻿using TomCheckley.Core.SiteConstants;
-using TomCheckley.Core.Models.Base;
+﻿using TomCheckley.Core.Models.Base;
 using TomCheckley.Core.Models.SectionTypes;
 using Umbraco.Cms.Core.Models.PublishedContent;
+using TomCheckley.Core.SiteConstants.Strings;
 
 namespace TomCheckley.Core.Factories.Concrete
 {

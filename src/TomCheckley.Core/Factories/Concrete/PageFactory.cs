@@ -1,6 +1,6 @@
 ﻿using TomCheckley.Core.Models.PageTypes;
 using TomCheckley.Core.Models.PageTypes.Base;
-using TomCheckley.Core.SiteConstants;
+using TomCheckley.Core.SiteConstants.Strings;
 using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace TomCheckley.Core.Factories.Concrete

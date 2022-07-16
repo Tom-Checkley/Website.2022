@@ -1,6 +1,6 @@
-﻿using TomCheckley.Core.SiteConstants;
-using TomCheckley.Core.Models.Banners;
+﻿using TomCheckley.Core.Models.Banners;
 using TomCheckley.Core.Models.Banners.Base;
+using TomCheckley.Core.SiteConstants.Strings;
 using Umbraco.Cms.Core.Web;
 using Umbraco.Extensions;
 
@@ -34,7 +34,7 @@ namespace TomCheckley.Core.Factories.Concrete
             }
             else
             {
-                throw new Exception($"No content could be found for { publishedRequest }");
+                throw new Exception($"No content could be found for {publishedRequest}");
             }
         }
     }
