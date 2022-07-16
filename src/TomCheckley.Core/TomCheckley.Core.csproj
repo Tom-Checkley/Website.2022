@@ -17,4 +17,10 @@
     <Folder Include="Models\ModuleBlocks\Settings\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Resolvers\AppDependencyResolver.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
 </Project>

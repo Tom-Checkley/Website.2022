@@ -1,4 +1,5 @@
-﻿using TomCheckley.Core.Factories.Concrete;
+﻿using TomCheckley.Core.Factories;
+using TomCheckley.Core.Factories.Concrete;
 using TomCheckley.Core.Models.Base;
 using Umbraco.Cms.Core.Models.Blocks;
 using Umbraco.Cms.Core.Models.PublishedContent;
@@ -19,7 +20,7 @@ namespace TomCheckley.Core.Models.SectionTypes.Base
                 if (_modules == null)
                 {
                     _modules = new List<IModuleBase>();
-                    var factory = new ModuleFactory();
+                    var factory = FactoryFactory.GetService<IModuleFactory>();
                     var value = _content.Value<BlockListModel>("modules");
 
                     if (value != null)

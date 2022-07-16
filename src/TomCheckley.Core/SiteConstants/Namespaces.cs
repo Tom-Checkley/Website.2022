@@ -13,5 +13,6 @@ namespace TomCheckley.Core.SiteConstants
         public const string PageTypes = $"{Models}.PageTypes";
         public const string SectionTypes = $"{Models}.SectionTypes";
         public const string ModuleTypes = $"{Models}.ModuleTypes";
+        public const string ModuleSettings = $"{ModuleTypes}.Settings";
     }
 }
