@@ -16,8 +16,8 @@ namespace TomCheckley.Core.Models.ModuleTypes
             {
                 if (_textModuleSettings == null)
                 {
-                    IModuleSettings<TextModuleSettings> textModule = this;
-                    _textModuleSettings = textModule.GetSettings(_settings);
+                    IModuleSettings<TextModuleSettings> textModuleRef = this;
+                    _textModuleSettings = textModuleRef.GetSettings(_settings);
                 }
                 return _textModuleSettings;
             }

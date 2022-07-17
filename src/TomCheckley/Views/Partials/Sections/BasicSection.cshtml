@@ -1,10 +1,15 @@
 ﻿@model BasicSection
 
-<section class="section@(Model.Settings.ReverseSection ? " section--reverse" : "")">
-    @if (Model.HasHeading)
-    {
+@if (Model.HasHeading)
+{
+    <section class="section@(Model.Settings.ReverseSection ? " section--reverse" : "")">
         <h2>@Model.Heading</h2>
-    }
-    @await Html.PartialAsync("Modules/ModuleListing", Model.Modules)
-</section>
-
+        @await Html.PartialAsync("Modules/ModuleListing", Model.Modules)
+    </section>
+}
+else
+{
+    <div class="section@(Model.Settings.ReverseSection ? " section--reverse" : "")">
+        @await Html.PartialAsync("Modules/ModuleListing", Model.Modules)
+    </div>
+}

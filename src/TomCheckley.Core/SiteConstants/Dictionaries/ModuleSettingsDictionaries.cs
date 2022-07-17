@@ -14,5 +14,26 @@ namespace TomCheckley.Core.SiteConstants.Dictionaries
             { "Centre", "center" },
             { "Right", "right" },
         };
+
+        public static Dictionary<string, string> ObjectFit = new()
+        {
+            { "None", "" },
+            { "Cover", "cover" },
+            { "Contain", "contain" },
+        };
+
+        public static Dictionary<string, string> MediaPosition = new()
+        {
+            { "Left", "left" },
+            { "Right", "right" },
+        };
+
+        public static Dictionary<string, string> MediaSize = new()
+        {
+            { "Small", "small" },
+            { "Medium", "medium" },
+            { "Large", "large" },
+        };
+
     }
 }

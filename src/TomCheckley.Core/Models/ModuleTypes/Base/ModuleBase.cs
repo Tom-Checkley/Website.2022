@@ -9,7 +9,7 @@ namespace TomCheckley.Core.Models.ModuleTypes.Base
         protected ISectionBase _parentSection;
 
         public Guid Id => _content.Key;
-        public string RazorView => $"Modules/{_content.ContentType.Alias}";
+        public virtual string RazorView => $"Modules/{_content.ContentType.Alias}";
         public ISectionBase ParentSection { get; private set; }
 
         //public IPublishedElement Settings { get; private set; }
