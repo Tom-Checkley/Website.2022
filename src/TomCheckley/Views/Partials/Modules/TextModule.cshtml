@@ -1,10 +1,11 @@
 ﻿@model TextModule
+@{
+	Layout = "/Views/Layouts/ModuleLayout.cshtml";
+}
 
 <div class="text-@(Model.Settings.TextAlign)">
-    @if (Model.HasHeading)
-    {
-        <h3>@Model.Heading</h3>
-    }
+    @await Html.PartialAsync("ViewHelpers/ModuleHeading", Model.Heading)
+
     @if (!Model.BodyText.ToString().IsNullOrWhiteSpace())
     {
         <div>@Html.Raw(Model.BodyText)</div>

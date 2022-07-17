@@ -1,0 +1,38 @@
+﻿@model MediaModule
+
+<div class="media-module" data-media-size="@Model.Settings.MediaSize", data-media-position="@Model.Settings.MediaPosition">
+    <div class="body">
+        @if (Model.HasHeading)
+        {
+            @await Html.PartialAsync("ViewHelpers/ModuleHeading", Model.Heading)
+        }
+        <div class="rte">@Html.Raw(Model.BodyText)</div>
+    </div>
+
+    <div class="media">
+        @await Html.PartialAsync("Modules/ModuleListing", Model.Media)
+    </div>
+</div>
+
+<style>
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .media-module {
+        display: flex;
+        gap: 1.5rem;
+    }
+    .media-module[data-media-position="left"] {
+        flex-direction: row-reverse;
+    }
+    [data-media-size="small"] .media {
+        flex: 0 0 25%;
+    }
+    [data-media-size="medium"] .media {
+        flex: 0 0 33.33%;
+    }
+    [data-media-size="large"] .media {
+        flex: 0 0 50%;
+    }
+</style>

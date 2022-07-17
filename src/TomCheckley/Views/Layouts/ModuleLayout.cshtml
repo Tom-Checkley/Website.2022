@@ -1,0 +1,29 @@
+﻿@using TomCheckley.Core.Models.ModuleTypes.Base
+@model IModuleBase
+
+<style>
+    section {
+        outline: 2px lime dashed;
+    }
+</style>
+@if (Model is ModuleWithHeadingBase)
+{
+    var model = (ModuleWithHeadingBase)Model;
+    if (model.HasHeading)
+    {
+        <section>
+            @RenderBody()
+        </section>
+    }
+    else
+    {
+     <div>
+        @RenderBody()
+    </div>   
+    }
+}
+else{
+    <div>
+        @RenderBody()
+    </div>
+}

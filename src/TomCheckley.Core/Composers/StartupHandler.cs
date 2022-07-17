@@ -23,8 +23,10 @@ namespace TomCheckley.Core.Composers
             // Factories
             services.AddTransient<IPageFactory, PageFactory>();
             services.AddTransient<ISectionFactory, SectionFactory>();
-            //services.AddTransient<IModuleFactory, ModuleFactory>();
+            services.AddTransient<IModuleFactory, ModuleFactory>();
+            services.AddTransient<IModuleBlockFactory, ModuleBlockFactory>();
             services.AddTransient<IBannerFactory, BannerFactory>();
+            services.AddTransient<IModuleSettingsFactory, ModuleSettingsFactory>();
 
             // Services
             services.AddTransient<ICommonUmbracoContentService, CommonUmbracoContentService>();

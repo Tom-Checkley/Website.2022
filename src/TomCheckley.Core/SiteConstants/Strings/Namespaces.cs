@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TomCheckley.Core.SiteConstants
+﻿namespace TomCheckley.Core.SiteConstants.Strings
 {
     public static class Namespaces
     {
@@ -13,5 +7,7 @@ namespace TomCheckley.Core.SiteConstants
         public const string PageTypes = $"{Models}.PageTypes";
         public const string SectionTypes = $"{Models}.SectionTypes";
         public const string ModuleTypes = $"{Models}.ModuleTypes";
+        public const string ModuleBlocks = $"{ModuleTypes}.ModuleBlocks";
+        public const string ModuleSettings = $"{ModuleTypes}.Settings";
     }
 }

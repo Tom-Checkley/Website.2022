@@ -7,12 +7,22 @@ using Umbraco.Extensions;
 
 namespace TomCheckley.Core.Models.ModuleTypes
 {
-    public class TextModule : ModuleWithSettingsBase
+    public class TextModule : ModuleWithHeadingBase, IModuleSettings<TextModuleSettings>
     {
-        public string Heading => _content.Value<string>("heading");
-        public bool HasHeading => !Heading.IsNullOrWhiteSpace();
         public HtmlEncodedString BodyText => _content.Value<HtmlEncodedString>("bodyText");
-        public override TextModuleSettings Settings => new(_settings);
+        public TextModuleSettings Settings
+        {
+            get
+            {
+                if (_textModuleSettings == null)
+                {
+                    IModuleSettings<TextModuleSettings> textModuleRef = this;
+                    _textModuleSettings = textModuleRef.GetSettings(_settings);
+                }
+                return _textModuleSettings;
+            }
+        }
+        private TextModuleSettings _textModuleSettings;
 
         public TextModule(IPublishedElement content, IPublishedElement settings, ISectionBase parentSection) : base(content, settings, parentSection)
         {

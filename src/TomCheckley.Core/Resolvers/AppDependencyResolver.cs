@@ -1,11 +1,11 @@
 ﻿namespace TomCheckley.Core.Resolvers
 {
-    public class AppDependenyResolver
+    public class AppDependencyResolver
     {
-        private static AppDependenyResolver _resolver;
+        private static AppDependencyResolver _resolver;
         private readonly IServiceProvider _serviceProvider;
 
-        public static AppDependenyResolver Current
+        public static AppDependencyResolver Current
         {
             get
             {
@@ -19,7 +19,7 @@
 
         public static void Init(IServiceProvider services)
         {
-            _resolver = new AppDependenyResolver(services);
+            _resolver = new AppDependencyResolver(services);
         }
 
         public object GetSevice(Type serviceType)
@@ -32,7 +32,7 @@
             return (T)_serviceProvider.GetService(typeof(T));
         }
 
-        private AppDependenyResolver(IServiceProvider serviceProvider)
+        private AppDependencyResolver(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
         }

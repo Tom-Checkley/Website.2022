@@ -1,6 +1,6 @@
-﻿using TomCheckley.Core.Factories.Concrete;
+﻿using TomCheckley.Core.Factories;
+using TomCheckley.Core.Factories.Concrete;
 using TomCheckley.Core.Models.Base;
-using TomCheckley.Core.Models.ModuleTypes.Base;
 using Umbraco.Cms.Core.Models.Blocks;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Extensions;
@@ -10,7 +10,7 @@ namespace TomCheckley.Core.Models.SectionTypes.Base
     public abstract class SectionBase : UmbracoElementBase, ISectionBase
     {
         public Guid Id => _content.Key;
-        public virtual string RazorView => $"Sections/{_content.ContentType.Alias }";
+        public virtual string RazorView => $"Sections/{_content.ContentType.Alias}";
         public string Heading => _content.Value<string>("heading");
         public bool HasHeading => !Heading.IsNullOrWhiteSpace();
         public List<IModuleBase> Modules
@@ -20,7 +20,7 @@ namespace TomCheckley.Core.Models.SectionTypes.Base
                 if (_modules == null)
                 {
                     _modules = new List<IModuleBase>();
-                    var factory = new ModuleFactory();
+                    var factory = FactoryFactory.GetService<IModuleFactory>();
                     var value = _content.Value<BlockListModel>("modules");
 
                     if (value != null)

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TomCheckley.Core.SiteConstants
+﻿namespace TomCheckley.Core.SiteConstants.Strings
 {
     public static class DocTypes
     {

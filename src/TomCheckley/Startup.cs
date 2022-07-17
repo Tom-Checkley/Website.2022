@@ -123,7 +123,7 @@ namespace TomCheckley
             
             app.UseStaticFiles();
 
-            AppDependenyResolver.Init(app.ApplicationServices);
+            AppDependencyResolver.Init(app.ApplicationServices);
         }
     }
 }
