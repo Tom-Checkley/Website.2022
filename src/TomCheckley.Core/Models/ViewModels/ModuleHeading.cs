@@ -17,11 +17,12 @@ namespace TomCheckley.Core.Models.ViewModels
         public bool HasHeading => !Heading.IsNullOrWhiteSpace();
         public string Subheading => _content.Value<string>("subheading");
         public bool HasSubheading => !Subheading.IsNullOrWhiteSpace();
-        public bool ParentSectionHasHeading => _parentSection.HasHeading;
 
-        public ModuleHeading(IPublishedElement content, ISectionBase parentSection) : base(content)
+        public bool ParentSectionHasHeading { get; }
+
+        public ModuleHeading(IPublishedElement content, bool parentSectionHasHeading) : base(content)
         {
-            _parentSection = parentSection;
+            ParentSectionHasHeading = parentSectionHasHeading;
         }
     }
 }

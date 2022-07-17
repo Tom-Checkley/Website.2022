@@ -1,0 +1,25 @@
+﻿@model ModuleHeading
+
+@if (Model.HasHeading)
+{
+    <div class="module__heading flow">
+        @if (Model.ParentSectionHasHeading)
+        {
+            <h3>@Model.Heading</h3>
+
+            if (Model.HasSubheading)
+            {
+                <h4>@Model.Subheading</h4>
+            }
+        }
+        else
+        {
+            <h2>@Model.Heading</h2>
+
+            if (Model.HasSubheading)
+            {
+                <h3>@Model.Subheading</h3>
+            }
+        }
+    </div>
+}
