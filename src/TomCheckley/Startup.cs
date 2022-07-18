@@ -8,6 +8,7 @@ using System;
 using System.IO.Compression;
 using System.Linq;
 using TomCheckley.Core.Controllers.Pages;
+using TomCheckley.Core.Extensions;
 using TomCheckley.Core.Resolvers;
 using Umbraco.Cms.Web.Website.Controllers;
 
@@ -106,6 +107,7 @@ namespace TomCheckley
             }
 
             app.UseResponseCompression();
+            app.AddCustomHttpHeaders();
             app.UseSession();
 
             app.UseUmbraco()

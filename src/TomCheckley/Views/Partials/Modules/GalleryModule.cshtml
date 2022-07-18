@@ -1,0 +1,37 @@
+﻿@using TomCheckley.Core.Models.Media
+@model GalleryModule
+@{
+    Layout = "/Views/Layouts/ModuleLayout.cshtml";
+}
+
+<div class="flow">
+    @if (Model.HasHeading)
+    {
+        @await Html.PartialAsync("ViewHelpers/ModuleHeading", Model.Heading)
+    }
+    @if (Model.HasBodyText)
+    {
+        <div class="rte">@Html.Raw(Model.BodyText)</div>
+    }
+    @if (Model.Images.Count > 0)
+    {
+        <div class="grid" style="display: grid; gap: 1.5rem; grid-template-columns: repeat(@(Model.Settings.Columns), 1fr);">
+            @foreach (ModuleBlockGalleryItem galleryItem in Model.Images)
+            {
+                if (Model.Settings.ExpandableGalleryEnabled)
+                {
+                    <a href="@galleryItem.Image.AbsoluteUrl" >
+                        @await Html.PartialAsync(galleryItem.RazorView, galleryItem)
+                    </a>
+                }
+                else
+                {
+                    <div style="grid-column: span 1;">
+                        @await Html.PartialAsync(galleryItem.RazorView, galleryItem)
+                    </div>
+                }
+            }
+        </div>
+    }
+</div>
+
