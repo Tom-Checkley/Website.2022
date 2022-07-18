@@ -19,7 +19,7 @@ namespace TomCheckley.Core.Models.ModuleTypes.ModuleBlocks
         public bool HasCaption => !Caption.IsNullOrWhiteSpace();
         public override string RazorView => "Modules/ModuleBlocks/Image";
 
-        public ModuleBlockImageSettings Settings
+        public virtual ModuleBlockImageSettings Settings
         {
             get
             {

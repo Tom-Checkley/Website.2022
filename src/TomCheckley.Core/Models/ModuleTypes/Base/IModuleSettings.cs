@@ -11,6 +11,12 @@ namespace TomCheckley.Core.Models.ModuleTypes.Base
         {
             var factory = FactoryFactory.GetService<IModuleSettingsFactory>();
             var model = factory.CreateModel(settings);
+            if (model == null)
+            {
+#if DEBUG
+                throw new Exception($"Settings of type: {settings.ContentType.Alias} could not be created.");
+#endif
+            }
             return (T)model;
 
         }

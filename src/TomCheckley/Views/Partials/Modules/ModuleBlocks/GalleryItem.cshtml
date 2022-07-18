@@ -1,0 +1,13 @@
+﻿@model ModuleBlockGalleryItem
+
+<figure>
+    <picture>
+        <img src="@Model.Image.Url" alt="@Model.Image.AltText" height="@Model.Image.Height" width="@Model.Image.Width" />
+    </picture>
+    @if (Model.HasCaption && Model.Settings.DisplayCaption)
+    {
+        <figcaption>
+            @Html.Raw(Model.Caption)
+        </figcaption>
+    }
+</figure>
