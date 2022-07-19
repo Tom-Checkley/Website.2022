@@ -21,7 +21,7 @@ namespace TomCheckley.Core.Services.Concrete
             _logger = logger;
         }
 
-        public MainNavigation GetMainNav()
+        public MainNavigationViewModel GetMainNav()
         {
             if (_mainNav == null)
             {
@@ -33,7 +33,7 @@ namespace TomCheckley.Core.Services.Concrete
                 }
                 if (_navItems == null)
                 {
-                    _navItems = new List<NavItem>();
+                    _navItems = new List<NavItemViewModel>();
                     var navItems = settings.Value<IEnumerable<IPublishedElement>>("mainNavItems");
                     if (navItems != null)
                     {
@@ -42,7 +42,7 @@ namespace TomCheckley.Core.Services.Concrete
                             var linkContent = navItem.Value<IPublishedContent>("link");
                             if (linkContent != null)
                             {
-                                _navItems.Add(new NavItem
+                                _navItems.Add(new NavItemViewModel
                                 {
                                     LinkText = navItem.Value<string>("linkText", fallback: Fallback.ToDefaultValue, defaultValue: linkContent.Name),
                                     Url = linkContent.Url(),
@@ -56,7 +56,7 @@ namespace TomCheckley.Core.Services.Concrete
                     }
                 }
 
-                _mainNav = new MainNavigation
+                _mainNav = new MainNavigationViewModel
                 {
                     HomePageLinkLogo = settings.Value<IPublishedContent>("homePageLinkLogo"),
                     NavItems = _navItems,
@@ -64,7 +64,7 @@ namespace TomCheckley.Core.Services.Concrete
             }
             return _mainNav;
         }
-        private MainNavigation _mainNav;
-        private List<NavItem> _navItems;
+        private MainNavigationViewModel _mainNav;
+        private List<NavItemViewModel> _navItems;
     }
 }

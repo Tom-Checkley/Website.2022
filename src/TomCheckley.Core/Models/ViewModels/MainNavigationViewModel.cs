@@ -7,9 +7,9 @@ using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace TomCheckley.Core.Models.ViewModels
 {
-    public class MainNavigation
+    public class MainNavigationViewModel
     {
         public IPublishedContent HomePageLinkLogo { get; set; }
-        public List<NavItem> NavItems { get; set; }
+        public List<NavItemViewModel> NavItems { get; set; }
     }
 }

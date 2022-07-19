@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TomCheckley.Core.Models.ViewModels
 {
-    public class NavItem
+    public class NavItemViewModel
     {
         public string LinkText { get; set; }
         public string Url { get; set; }

@@ -2,6 +2,7 @@
 
 <article>
     <h2>@Model.CardHeading</h2>
+    <time datetime="@Model.PublishDate.ToString("yyyy-MM-dd")" pubdate="pubdate">@Model.PublishDate.ToString("dd MMMM yyyy")</time>
     @if (Model.HasExcerpt)
     {
         <div>

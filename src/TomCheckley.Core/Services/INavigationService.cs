@@ -9,6 +9,6 @@ namespace TomCheckley.Core.Services
 {
     public interface INavigationService
     {
-        MainNavigation GetMainNav();
+        MainNavigationViewModel GetMainNav();
     }
 }

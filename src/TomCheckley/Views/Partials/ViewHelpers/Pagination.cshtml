@@ -1,0 +1,47 @@
+﻿@inherits UmbracoViewPage<PaginationViewModel>
+
+@if (Model.TotalPages > 1)
+{
+    <nav
+        aria-label="Pagination, currently on page @Model.CurrentPage of @Model.TotalPages"
+        data-layout="ViewHelpers/Pagination"
+    >
+        <a href="@Model.GetPageUrl(1)"
+            aria-label="First page, 1 of @Model.TotalPages"
+        >
+            <span>First page</span>
+        </a>
+
+        <a href="@Model.GetPageUrl(Model.CurrentPage - 1)" 
+            aria-label="Previous page, @(Model.CurrentPage - 1) of @Model.TotalPages"
+        >
+            <span>Previous page</span>
+       </a>
+
+        <ul>
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li>
+                    <a href="@Model.GetPageUrl(i)"
+                        aria-label="Page @i of @Model.TotalPages"
+                        aria-current="@(Model.CurrentPage == i ? "page" : null)"
+                    >
+                        <span>@i</span>
+                    </a>
+                </li>
+            }
+        </ul>
+
+       <a href="@Model.GetPageUrl(Model.CurrentPage + 1)" 
+            aria-label="Next page, @(Model.CurrentPage + 1) of @Model.TotalPages"
+        >
+            <span>Next page</span>
+       </a>
+
+       <a href="@Model.GetPageUrl(1)"
+            aria-label="Last page, @Model.TotalPages of @Model.TotalPages"
+        >
+            <span>Last page</span>
+        </a>
+    </nav>
+}

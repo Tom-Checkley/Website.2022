@@ -7,7 +7,7 @@ namespace TomCheckley.Core.Models.ModuleTypes.Base
 {
     public abstract class ModuleWithHeadingBase : ModuleBase
     {
-        public ModuleHeading Heading => new(_content, ParentSectionHasHeading);
+        public ModuleHeadingViewModel Heading => new(_content, ParentSectionHasHeading);
         public bool HasHeading => Heading.HasHeading;
         public bool ParentSectionHasHeading => ParentSection.HasHeading;
 
