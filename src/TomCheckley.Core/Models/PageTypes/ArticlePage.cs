@@ -11,7 +11,7 @@ namespace TomCheckley.Core.Models.PageTypes
 {
     public class ArticlePage : ModularPage
     {
-        public DateTime DatePublished => _content.Value<DateTime>("datePublished");
+        public DateTime PublishDate => _content.Value<DateTime>("publishDate");
 
         public ArticlePage(IPublishedContent content) : base(content)
         {

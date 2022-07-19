@@ -33,6 +33,7 @@ namespace TomCheckley.Core.Composers
             services.AddTransient<ISiteService, SiteService>();
             services.AddTransient<INavigationService, NavigationService>();
             services.AddTransient<ICompanyDetailsService, CompanyDetailsService>();
+            services.AddTransient<IArticleService, ArticleService>();
         }
     }
 }

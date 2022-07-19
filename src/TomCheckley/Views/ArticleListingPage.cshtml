@@ -3,5 +3,7 @@
     Layout = "Layouts/MasterLayout.cshtml";
 }
 
-<h1>Hello</h1>
+@await Html.PartialAsync("Sections/SectionListing", Model.Sections)
+
+@await Html.PartialAsync("Articles/PaginatedList", Model.Items)
                         

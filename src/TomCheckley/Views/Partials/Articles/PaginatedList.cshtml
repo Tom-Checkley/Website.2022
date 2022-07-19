@@ -1,0 +1,12 @@
+﻿@model PaginatedArticleCardsList
+
+<div data-layout="Articles/PaginatedArticleCardsList">
+    @if (Model.Items.Count > 0)
+    {
+        @await Html.PartialAsync("Articles/List", Model.Items)
+    }
+    else
+    {
+        <p>No articles could be found.</p>
+    }
+</div>
