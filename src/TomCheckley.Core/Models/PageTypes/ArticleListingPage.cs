@@ -8,7 +8,7 @@ using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace TomCheckley.Core.Models.PageTypes
 {
-    public class ArticleListingPage : UmbracoPageBase
+    public class ArticleListingPage : ModularPage
     {
         public ArticleListingPage(IPublishedContent content) : base(content)
         {
