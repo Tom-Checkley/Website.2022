@@ -1,0 +1,9 @@
+﻿@inherits UmbracoViewPage<ArticleListingPage>
+@{
+    Layout = "Layouts/MasterLayout.cshtml";
+}
+
+@await Html.PartialAsync("Sections/SectionListing", Model.Sections)
+
+@await Html.PartialAsync("Articles/PaginatedList", Model.Items)
+                        

@@ -1,0 +1,12 @@
+﻿@model ArticleCard
+
+<article>
+    <h2>@Model.CardHeading</h2>
+    @if (Model.HasExcerpt)
+    {
+        <div>
+            <p>@Model.CardExcerpt</p>
+        </div>
+    }
+    <a href="@Model.CardLink">@Model.CardButtonText</a>
+</article>
