@@ -8,6 +8,6 @@ namespace TomCheckley.Core.Services
         string GetCompanyPhoneNumber();
         string GetCompanyEmail();
         Address GetCompanyAddress();
-        SocialMediaLinks GetSocialMediaLinks();
+        SocialMediaLinksViewModel GetSocialMediaLinks();
     }
 }

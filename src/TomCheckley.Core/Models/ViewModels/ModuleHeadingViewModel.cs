@@ -9,7 +9,7 @@ using Umbraco.Extensions;
 
 namespace TomCheckley.Core.Models.ViewModels
 {
-    public class ModuleHeading : UmbracoElementBase
+    public class ModuleHeadingViewModel : UmbracoElementBase
     {
         private readonly ISectionBase _parentSection;
 
@@ -20,7 +20,7 @@ namespace TomCheckley.Core.Models.ViewModels
 
         public bool ParentSectionHasHeading { get; }
 
-        public ModuleHeading(IPublishedElement content, bool parentSectionHasHeading) : base(content)
+        public ModuleHeadingViewModel(IPublishedElement content, bool parentSectionHasHeading) : base(content)
         {
             ParentSectionHasHeading = parentSectionHasHeading;
         }

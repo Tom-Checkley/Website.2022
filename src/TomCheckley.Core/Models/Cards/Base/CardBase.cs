@@ -17,7 +17,7 @@ namespace TomCheckley.Core.Models.Cards.Base
             {
                 var heading = _content.Value<string>("cardHeading");
 
-                if (heading == null)
+                if (heading.IsNullOrWhiteSpace())
                 {
                     var fallback = _content.Value<string>("bannerHeadingLine1");
                     if (fallback.IsNullOrWhiteSpace())

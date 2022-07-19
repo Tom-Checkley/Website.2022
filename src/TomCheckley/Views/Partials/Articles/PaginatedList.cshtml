@@ -1,9 +1,15 @@
-﻿@model PaginatedArticleCardsList
+﻿@model PaginatedArticleCardsListViewModel
 
 <div data-layout="Articles/PaginatedArticleCardsList">
+    @if (Model.HasFeaturedArticle)
+    {
+        @await Html.PartialAsync(Model.FeaturedArticleCard.RazorView, Model.FeaturedArticleCard)
+    }
     @if (Model.Items.Count > 0)
     {
         @await Html.PartialAsync("Articles/List", Model.Items)
+
+        @Html.Pagination(Model.TotalItems, Model.CurrentPage, Model.ItemsPerPage, Model.BaseUrl)
     }
     else
     {

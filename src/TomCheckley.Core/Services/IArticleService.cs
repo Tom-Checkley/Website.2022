@@ -6,7 +6,7 @@ namespace TomCheckley.Core.Services
 {
     public interface IArticleService
     {
-        PaginatedArticleCardsList GetPaged(Guid articleListingPageId, int page, int amountPerPage, params Guid[] ignoreIds);
+        PaginatedArticleCardsListViewModel GetPaged(Guid articleListingPageId, int page, int amountPerPage, params Guid[] ignoreIds);
         List<ArticleCard> GetAll(Guid articleListingPageId);
         bool IsArticleValid(IPublishedContent content);
     }

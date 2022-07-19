@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TomCheckley.Core.Factories;
+using TomCheckley.Core.Models.Cards;
 using TomCheckley.Core.Models.PageTypes;
 using TomCheckley.Core.Services;
 using Umbraco.Cms.Core.Models.PublishedContent;
@@ -37,11 +38,26 @@ namespace TomCheckley.Core.Controllers.Pages
         public override IActionResult Index()
         {
             string page = HttpContext.Request.Query["page"];
+            
             var amountPerPage = CurrentPage.Value<int>("articlesPerPage", fallback: Fallback.ToDefaultValue, defaultValue: DEFAULT_AMOUNT_PER_PAGE);
+            var featuredArticle = CurrentPage.Value<IPublishedContent>("featuredArticle");
+            
+            var ignoredIds = new List<Guid>();            
+            if (featuredArticle != null)
+            {
+                ignoredIds.Add(featuredArticle.Key);
+            }
+            
             var model = new ArticleListingPage(CurrentPage)
             {
-                Items = _articleService.GetPaged(CurrentPage.Key, string.IsNullOrWhiteSpace(page) ? 1 : int.Parse(page), amountPerPage)
-            };            
+                Items = _articleService.GetPaged(CurrentPage.Key, string.IsNullOrWhiteSpace(page) ? 1 : int.Parse(page), amountPerPage, ignoredIds.ToArray())
+            };
+            if (featuredArticle != null)
+            {
+                model.Items.FeaturedArticleCard = new ArticleCard(featuredArticle);
+                model.Items.HasFeaturedArticle = true;
+            }
+
             return View(model);
         }
     }

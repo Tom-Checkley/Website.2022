@@ -1,6 +1,6 @@
 ﻿namespace TomCheckley.Core.Models.ViewModels
 {
-    public class SocialMediaLinks
+    public class SocialMediaLinksViewModel
     {
         public string FacebookUrl { get; set; }
         public string TwitterUrl { get; set; }

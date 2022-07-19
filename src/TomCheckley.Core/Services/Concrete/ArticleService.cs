@@ -28,11 +28,11 @@ namespace TomCheckley.Core.Services.Concrete
                            .ToList();
         }
 
-        public PaginatedArticleCardsList GetPaged(Guid articleListingPageId, int page, int amountPerPage, params Guid[] ignoreIds)
+        public PaginatedArticleCardsListViewModel GetPaged(Guid articleListingPageId, int page, int amountPerPage, params Guid[] ignoreIds)
         {
             if (amountPerPage == 0)
             {
-                return new PaginatedArticleCardsList();
+                return new PaginatedArticleCardsListViewModel();
             }
 
             var articleListingPage = _umbracoHelper.Content(articleListingPageId);
@@ -44,13 +44,13 @@ namespace TomCheckley.Core.Services.Concrete
                                                 .Select(c => new ArticleCard(c))
                                                 .ToList();
 
-            return new PaginatedArticleCardsList
+            return new PaginatedArticleCardsListViewModel
             {
                 BaseUrl = articleListingPage.Url(),
                 Items = pagedResults,
                 CurrentPage = page,
                 ItemsPerPage = amountPerPage,
-                TotalItems = pagedResults.Count
+                TotalItems = allItems.Count
             };
         }
 
@@ -62,7 +62,7 @@ namespace TomCheckley.Core.Services.Concrete
         private List<IPublishedContent> GetAllChildren(IPublishedContent articleListingPage)
         {
             return articleListingPage.Children
-                    .Where(IsArticleValid)
+                    .Where(x => IsArticleValid(x))
                     .OrderByDescending(date => date.Value<DateTime>("publishDate"))
                     .ToList();
         }

@@ -40,9 +40,9 @@ namespace TomCheckley.Core.Services.Concrete
             return _settings.Value<string>("phoneNumber");
         }
 
-        public SocialMediaLinks GetSocialMediaLinks()
+        public SocialMediaLinksViewModel GetSocialMediaLinks()
         {
-            return new SocialMediaLinks
+            return new SocialMediaLinksViewModel
             {
                 FacebookUrl = _settings.Value<string>("facebookUrl"),
                 TwitterUrl = _settings.Value<string>("twitterUrl"),
